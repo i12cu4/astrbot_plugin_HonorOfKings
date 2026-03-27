@@ -6,7 +6,7 @@
         "enable": {
             "description": "是否启用",
             "type": "bool",
-            "default": true,
+            "default": false,
             "hint": "是否启用指令前缀检查功能"
         },
         "text": {
@@ -21,13 +21,13 @@
         "description": "应天API 令牌",
         "type": "string",
         "default": "",
-        "hint": "前往https://api.t1qq.com 注册并创建令牌（免费）。"
+        "hint": "前往https://api.t1qq.com 注册，可激活最近战机以及主页资料查询。"
     },
     "nyapi_token": {
         "description": "柠柚API 令牌",
         "type": "string",
         "default": "",
-        "hint": "前往https://api.nycnm.cn 注册并创建令牌（免费）。"
+        "hint": "前往https://api.nycnm.cn 注册，可激活英雄上榜战力查询。"
     },
     "comment": {
         "description": "战绩锐评",

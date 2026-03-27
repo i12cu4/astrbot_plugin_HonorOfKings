@@ -10,7 +10,7 @@
         }
     },
     "gok_ziliao":{
-        "url":"https://api.t1qq.com/api/tool/wzrr/ydtp",
+        "url":"https://api.t1qq.com/api/tool/wzrr/wzzl",
         "method":"GET",
         "description":"王者荣耀资料查询",
         "params":{

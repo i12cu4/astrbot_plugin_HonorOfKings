@@ -2,9 +2,7 @@ from pathlib import Path
 import aiofiles
 
 async def load_template(template_name: str) -> str:
-    """
-    异步加载模板内容（非阻塞）
-    """
+    """异步加载模板内容（非阻塞）"""
     plugin_dir = Path(__file__).parent.parent
     template_path = plugin_dir / "templates" / template_name
 

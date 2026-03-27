@@ -1,4 +1,3 @@
-# core/request.py
 import json
 import aiohttp
 import asyncio

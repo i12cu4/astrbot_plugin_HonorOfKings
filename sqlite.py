@@ -9,10 +9,6 @@ class AsyncSQLiteDB:
         self.db_path = db_path
         self.conn: Optional[aiosqlite.Connection] = None
 
-    # ======================
-    # 生命周期
-    # ======================
-
     async def connect(self):
         self.conn = await aiosqlite.connect(self.db_path)
         self.conn.row_factory = aiosqlite.Row
@@ -20,10 +16,6 @@ class AsyncSQLiteDB:
     async def close(self):
         if self.conn:
             await self.conn.close()
-
-    # ======================
-    # 基础执行
-    # ======================
 
     async def execute(self, sql: str, params: Tuple = ()):
         async with self.conn.execute(sql, params):
@@ -38,10 +30,6 @@ class AsyncSQLiteDB:
         async with self.conn.execute(sql, params) as cursor:
             rows = await cursor.fetchall()
             return [dict(r) for r in rows]
-
-    # ======================
-    # CRUD
-    # ======================
 
     async def insert(self, table: str, data: Dict[str, Any]):
         keys = ", ".join(data.keys())
